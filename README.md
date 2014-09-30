@@ -1,9 +1,51 @@
-Ziggeo iOS SDK
-=================
+Ziggeo iOS SDK Alpha
+====================
 
-Ziggeo API (http://api.ziggeo.com) allows you to integrate video recording and playback with only
+Ziggeo API (http://ziggeo.com) allows you to integrate video recording and playback with only
 two lines of code in your site, service or app. This is the iOS SDK repository. It's open source,
 so if you want to improve on it, feel free to add a pull request.
+
+
+## Setup
+
+- Run "pod install"
+- Open library
+- Compile library 
+- Add libZiggeoiOsSDK.a to list of frameworks
+- Add library root folder to list of header includes
+
+
+## Initialize Application
+
+```
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [ZiggeoiOsSDK init:@"APPLICATION_TOKEN"];
+    return YES;
+}
+```
+
+## Player
+
+```
+    VideoPlayer *view = [[VideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
+    [self.view addSubview:view];
+    [playerview setVideoToken:@"VIDEO_TOKEN"];
+```
+
+## Recorder
+
+```
+    VideoRecorder *view = [[VideoRecorder alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
+    [self.view addSubview:view];
+```
+
+
+## Contributors
+- Gianluca di Maggio
+- Oliver Friedmann
 
 
 ## License

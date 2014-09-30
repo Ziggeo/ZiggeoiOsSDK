@@ -10,8 +10,9 @@
 
 @implementation ZiggeoiOsSDK
 
-static NSString* embedServerUri = @"embed.ziggeo.com";
-static NSString* wowzaServerUri = @"wowzaapi.ziggeo.com";
+static NSString* embedServerUri = @"http://embed.ziggeo.com";
+static NSString* wowzaPlayUri = @"http://wowza.ziggeo.com:1935/vod/_definst_";
+static NSString* wowzaServerUri = @"rtmp://wowza.ziggeo.com:1935/record/_definst_";
 
 static NSString* token = @"";
 
@@ -22,28 +23,37 @@ static NSString* token = @"";
 
 + (NSURL*)getVideoPath:(NSString*)video_token
 {
-    NSMutableString* url = [[NSMutableString alloc] init];
-    [url appendString:@"https://"];
-    [url appendString:wowzaServerUri];
-    [url appendString:@"/vod/_definst_/applications/"];
-    [url appendString:token];
-    [url appendString:@"/videos/"];
-    [url appendString:video_token];
-    [url appendString:@"/video.mp4/playlist.m3u8"];
-    return [NSURL URLWithString:url];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/applications/%@/videos/%@/video.mp4/playlist.m3u8", wowzaPlayUri, token, video_token]];
 }
 
 + (NSURL*)getImagePath:(NSString*)video_token;
 {
-    NSMutableString* url = [[NSMutableString alloc] init];
-    [url appendString:@"https://"];
-    [url appendString:embedServerUri];
-    [url appendString:@"/v1/applications/"];
-    [url appendString:token];
-    [url appendString:@"/videos/"];
-    [url appendString:video_token];
-    [url appendString:@"/image"];
-    return [NSURL URLWithString:url];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/v1/applications/%@/videos/%@/image", embedServerUri, token, video_token]];
+}
+
++ (NSURL*)postVideoPath:(NSString*)video_token stream:(NSString*)stream_token
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/v1/applications/%@/videos/%@/streams/%@/recordersubmit", embedServerUri, token, video_token, stream_token]];
+}
+
++ (NSURL*)postNewVideoPath
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/v1/applications/%@/videos?flash_recording=true", embedServerUri, token]];
+}
+
++ (NSURL*)postNewStreamPath:(NSString*)video_token;
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@/v1/applications/%@/videos/%@/streams?flash_recording=true", embedServerUri, token, video_token]];
+}
+
++ (NSString*)recordWowzaPath:(NSString*)video_token stream:(NSString*)stream_token
+{
+    return [NSString stringWithFormat:@"applications___%@___videos___%@___streams___%@___video.mp4", token, video_token, stream_token];
+}
+
++ (NSString*)recordWowzaServer
+{
+    return wowzaServerUri;
 }
 
 

@@ -1,5 +1,5 @@
 //
-//  ZiggeoVideoPlayer.h
+//  VideoPlayer.h
 //  ZiggeoiOsSDK
 //
 //  Created by Oliver Friedmann on 24/04/14.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZiggeoPlayerView : UIView
+@interface VideoPlayer : UIView
 
--(void)attach:(NSString*)video_token;
--(void)play;
+-(void)setVideoToken:(NSString*)video_token;
 
 @end
