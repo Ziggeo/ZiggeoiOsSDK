@@ -11,8 +11,8 @@ so if you want to improve on it, feel free to add a pull request.
 - Run "pod install"
 - Open library
 - Compile library 
-- Add libZiggeoiOsSDK.a to list of frameworks
-- Add library root folder to list of header includes
+- Add libZiggeoiOsSDK.a and libPods.a to list of frameworks
+- Add Ziggeo library root folder to list of header includes (Header search paths)
 
 
 ## Initialize Application
