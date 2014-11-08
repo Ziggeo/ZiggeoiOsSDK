@@ -17,15 +17,15 @@ Your App:
 - Create iOS App
 - Copy all image assets from the library to your project
 - Add the following header search paths (change path accordingly)
-	$SOURCE_ROOT/../ZiggeoiOsSDK
-	$SOURCE_ROOT/../ZiggeoiOsSDK/Pods/VideoCore
+	- $SOURCE_ROOT/../ZiggeoiOsSDK
+	- $SOURCE_ROOT/../ZiggeoiOsSDK/Pods/VideoCore
 - Add the following frameworks
-	libc++.dylib
-	VideoToolbox.framework
-	CoreMedia.framework
-	AudioToolbox.framework
-	AVFoundation.framework
-	MediaPlayer.framework
+	- libc++.dylib
+	- VideoToolbox.framework
+	- CoreMedia.framework
+	- AudioToolbox.framework
+	- AVFoundation.framework
+	- MediaPlayer.framework
 - Add the following libraries as frameworks
 	libPods-VideoCore.a
 	libZiggeoiOsSDK.a
