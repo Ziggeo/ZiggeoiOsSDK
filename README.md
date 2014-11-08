@@ -27,8 +27,8 @@ Your App:
 	- AVFoundation.framework
 	- MediaPlayer.framework
 - Add the following libraries as frameworks
-	libPods-VideoCore.a
-	libZiggeoiOsSDK.a
+	- libPods-VideoCore.a
+	- libZiggeoiOsSDK.a
 
 
 ## Initialize Application
