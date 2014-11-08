@@ -8,11 +8,27 @@ so if you want to improve on it, feel free to add a pull request.
 
 ## Setup
 
-- Run "pod install"
-- Open library
-- Compile library 
-- Add libZiggeoiOsSDK.a and libPods.a to list of frameworks
-- Add Ziggeo library root folder to list of header includes (Header search paths)
+Preparations:
+- Clone this library
+- Run pod install
+- Build the library
+
+Your App:
+- Create iOS App
+- Copy all image assets from the library to your project
+- Add the following header search paths (change path accordingly)
+	$SOURCE_ROOT/../ZiggeoiOsSDK
+	$SOURCE_ROOT/../ZiggeoiOsSDK/Pods/VideoCore
+- Add the following frameworks
+	libc++.dylib
+	VideoToolbox.framework
+	CoreMedia.framework
+	AudioToolbox.framework
+	AVFoundation.framework
+	MediaPlayer.framework
+- Add the following libraries as frameworks
+	libPods-VideoCore.a
+	libZiggeoiOsSDK.a
 
 
 ## Initialize Application
