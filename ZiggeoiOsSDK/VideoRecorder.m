@@ -130,6 +130,7 @@
             // here. In the latter case, a spinner has been shown instead,
             // that we need to stop here and then display the player
             hasUploadEnded = TRUE;
+            [NSThread sleepForTimeInterval:2];
             [self resetStream];
             if (self.delegate)
                 [self.delegate onUploadCompleteWithVideoToken:VIDEO_TOKEN andImage:nil];
