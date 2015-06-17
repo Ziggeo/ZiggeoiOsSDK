@@ -1,1053 +1,521 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>17872618D493FB782AB59571</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2FB038F7C7314FC3F5C78DFC</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>724870D15785ED05644C294D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>9F81A71075D685040C9319F2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A871908C31C007760C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B5003A951908C31C007760C3</string>
-				<string>B5003A921908C31C007760C3</string>
-				<string>B5003A911908C31C007760C3</string>
-				<string>F675EF88B9DA71832842D50A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A881908C31C007760C3</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Ziggeo</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>B5003A8B1908C31C007760C3</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>B5003A871908C31C007760C3</string>
-			<key>productRefGroup</key>
-			<string>B5003A911908C31C007760C3</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>B5003A8F1908C31C007760C3</string>
-				<string>B5003A9F1908C31D007760C3</string>
-				<string>B5003AB91908C402007760C3</string>
-			</array>
-		</dict>
-		<key>B5003A8B1908C31C007760C3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B5003AB11908C31D007760C3</string>
-				<string>B5003AB21908C31D007760C3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B5003A8C1908C31C007760C3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B596C3291908D25F007AD95D</string>
-				<string>B5003A9B1908C31C007760C3</string>
-				<string>B5003AC11908C892007760C3</string>
-				<string>B5DAFD0619DA52140018539C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B5003A8D1908C31C007760C3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B5003A941908C31C007760C3</string>
-				<string>B5DAFCE119DA325B0018539C</string>
-				<string>B9C0EE67B99083F65EFB4163</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B5003A8E1908C31C007760C3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>dstPath</key>
-			<string>include/$(PRODUCT_NAME)</string>
-			<key>dstSubfolderSpec</key>
-			<string>16</string>
-			<key>files</key>
-			<array>
-				<string>B5003A991908C31C007760C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXCopyFilesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B5003A8F1908C31C007760C3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B5003AB31908C31D007760C3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>724870D15785ED05644C294D</string>
-				<string>B5003A8C1908C31C007760C3</string>
-				<string>B5003A8D1908C31C007760C3</string>
-				<string>B5003A8E1908C31C007760C3</string>
-				<string>DCFF6ED4043D06198FA27716</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ZiggeoiOsSDK</string>
-			<key>productName</key>
-			<string>ZiggeoiOsSDK</string>
-			<key>productReference</key>
-			<string>B5003A901908C31C007760C3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>B5003A901908C31C007760C3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libZiggeoiOsSDK.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B5003A911908C31C007760C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B5003A901908C31C007760C3</string>
-				<string>B5003AA01908C31D007760C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A921908C31C007760C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2FB038F7C7314FC3F5C78DFC</string>
-				<string>B5DAFCE019DA325B0018539C</string>
-				<string>B5003A931908C31C007760C3</string>
-				<string>B5003AA11908C31D007760C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A931908C31C007760C3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>B5003A941908C31C007760C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5003A931908C31C007760C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5003A951908C31C007760C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B596C3271908D25F007AD95D</string>
-				<string>B596C3281908D25F007AD95D</string>
-				<string>B5003ABF1908C892007760C3</string>
-				<string>B5003AC01908C892007760C3</string>
-				<string>B5003A981908C31C007760C3</string>
-				<string>B5003A9A1908C31C007760C3</string>
-				<string>B5003A961908C31C007760C3</string>
-				<string>B5DAFD0519DA52140018539C</string>
-				<string>B5DAFD0719DA52290018539C</string>
-				<string>B52F41601A0E4C1D006F101C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ZiggeoiOsSDK</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A961908C31C007760C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B5003A971908C31C007760C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A971908C31C007760C3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ZiggeoiOsSDK-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A981908C31C007760C3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ZiggeoiOsSDK.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A991908C31C007760C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5003A981908C31C007760C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5003A9A1908C31C007760C3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ZiggeoiOsSDK.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003A9B1908C31C007760C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5003A9A1908C31C007760C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5003A9C1908C31D007760C3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B5003AC21908C892007760C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B5003A9D1908C31D007760C3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B5003AA21908C31D007760C3</string>
-				<string>B5003AA81908C31D007760C3</string>
-				<string>B5003AA31908C31D007760C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B5003A9E1908C31D007760C3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B5003A9F1908C31D007760C3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B5003AB61908C31D007760C3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B5003A9C1908C31D007760C3</string>
-				<string>B5003A9D1908C31D007760C3</string>
-				<string>B5003A9E1908C31D007760C3</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>B5003AA71908C31D007760C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ZiggeoiOsSDKTests</string>
-			<key>productName</key>
-			<string>ZiggeoiOsSDKTests</string>
-			<key>productReference</key>
-			<string>B5003AA01908C31D007760C3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>B5003AA01908C31D007760C3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ZiggeoiOsSDKTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B5003AA11908C31D007760C3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>B5003AA21908C31D007760C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5003AA11908C31D007760C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5003AA31908C31D007760C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5003A931908C31C007760C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5003AA61908C31D007760C3</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>B5003A881908C31C007760C3</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B5003A8F1908C31C007760C3</string>
-			<key>remoteInfo</key>
-			<string>ZiggeoiOsSDK</string>
-		</dict>
-		<key>B5003AA71908C31D007760C3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>B5003A8F1908C31C007760C3</string>
-			<key>targetProxy</key>
-			<string>B5003AA61908C31D007760C3</string>
-		</dict>
-		<key>B5003AA81908C31D007760C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5003A901908C31C007760C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5003AB11908C31D007760C3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B5003AB21908C31D007760C3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B5003AB31908C31D007760C3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B5003AB41908C31D007760C3</string>
-				<string>B5003AB51908C31D007760C3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B5003AB41908C31D007760C3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>17872618D493FB782AB59571</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>DSTROOT</key>
-				<string>/tmp/ZiggeoiOsSDK.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>ZiggeoiOsSDK/ZiggeoiOsSDK-Prefix.pch</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B5003AB51908C31D007760C3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>9F81A71075D685040C9319F2</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>DSTROOT</key>
-				<string>/tmp/ZiggeoiOsSDK.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>ZiggeoiOsSDK/ZiggeoiOsSDK-Prefix.pch</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B5003AB61908C31D007760C3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B5003AB71908C31D007760C3</string>
-				<string>B5003AB81908C31D007760C3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B5003AB71908C31D007760C3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>ZiggeoiOsSDK/ZiggeoiOsSDK-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ZiggeoiOsSDKTests/ZiggeoiOsSDKTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B5003AB81908C31D007760C3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>ZiggeoiOsSDK/ZiggeoiOsSDK-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ZiggeoiOsSDKTests/ZiggeoiOsSDKTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B5003AB91908C402007760C3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B5003ABA1908C402007760C3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B5003ABE1908C571007760C3</string>
-			</array>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXAggregateTarget</string>
-			<key>name</key>
-			<string>UniversalLib</string>
-			<key>productName</key>
-			<string>UniversalLib</string>
-		</dict>
-		<key>B5003ABA1908C402007760C3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B5003ABB1908C402007760C3</string>
-				<string>B5003ABC1908C402007760C3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B5003ABB1908C402007760C3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SYMROOT</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B5003ABC1908C402007760C3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SYMROOT</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B5003ABE1908C571007760C3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string># define output folder environment variable
-UNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
 
-# Step 1. Build Device and Simulator versions
-xcodebuild -target ImageFilters ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR="${BUILD_DIR}" BUILD_ROOT="${BUILD_ROOT}"
-xcodebuild -target ImageFilters -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR="${BUILD_DIR}" BUILD_ROOT="${BUILD_ROOT}"
+/* Begin PBXAggregateTarget section */
+		B5003AB91908C402007760C3 /* UniversalLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B5003ABA1908C402007760C3 /* Build configuration list for PBXAggregateTarget "UniversalLib" */;
+			buildPhases = (
+				B5003ABE1908C571007760C3 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalLib;
+			productName = UniversalLib;
+		};
+/* End PBXAggregateTarget section */
 
-# make sure the output directory exists
-mkdir -p "${UNIVERSAL_OUTPUTFOLDER}"
+/* Begin PBXBuildFile section */
+		B5003A941908C31C007760C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5003A931908C31C007760C3 /* Foundation.framework */; };
+		B5003A991908C31C007760C3 /* ZiggeoiOsSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5003A981908C31C007760C3 /* ZiggeoiOsSDK.h */; };
+		B5003A9B1908C31C007760C3 /* ZiggeoiOsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B5003A9A1908C31C007760C3 /* ZiggeoiOsSDK.m */; };
+		B5003AA21908C31D007760C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5003AA11908C31D007760C3 /* XCTest.framework */; };
+		B5003AA31908C31D007760C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5003A931908C31C007760C3 /* Foundation.framework */; };
+		B5003AA81908C31D007760C3 /* libZiggeoiOsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5003A901908C31C007760C3 /* libZiggeoiOsSDK.a */; };
+		B5003AC11908C892007760C3 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5003AC01908C892007760C3 /* AsyncImageView.m */; };
+		B5003AC21908C892007760C3 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5003AC01908C892007760C3 /* AsyncImageView.m */; };
+		B596C3291908D25F007AD95D /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B596C3281908D25F007AD95D /* VideoPlayer.m */; };
+		B5B0BFDC1B31260B00F4F4D5 /* UrlService.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B0BFDB1B31260B00F4F4D5 /* UrlService.m */; };
+		B5DAFCE119DA325B0018539C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DAFCE019DA325B0018539C /* UIKit.framework */; };
+		B5DAFD0619DA52140018539C /* VideoRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DAFD0519DA52140018539C /* VideoRecorder.m */; };
+		B9C0EE67B99083F65EFB4163 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB038F7C7314FC3F5C78DFC /* libPods.a */; };
+/* End PBXBuildFile section */
 
-# Step 2. Create universal binary file using lipo
-lipo -create -output "${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a" "${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a" "${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a"
+/* Begin PBXContainerItemProxy section */
+		B5003AA61908C31D007760C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5003A881908C31C007760C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5003A8F1908C31C007760C3;
+			remoteInfo = ZiggeoiOsSDK;
+		};
+/* End PBXContainerItemProxy section */
 
-# Last touch. copy the header files. Just for convenience
-cp -R "${BUILD_DIR}/${CONFIGURATION}-iphoneos/include" "${UNIVERSAL_OUTPUTFOLDER}/"</string>
-		</dict>
-		<key>B5003ABF1908C892007760C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AsyncImageView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003AC01908C892007760C3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AsyncImageView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5003AC11908C892007760C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5003AC01908C892007760C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5003AC21908C892007760C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5003AC01908C892007760C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B52F41601A0E4C1D006F101C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B596C3271908D25F007AD95D</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>VideoPlayer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B596C3281908D25F007AD95D</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>VideoPlayer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B596C3291908D25F007AD95D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B596C3281908D25F007AD95D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5DAFCE019DA325B0018539C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>B5DAFCE119DA325B0018539C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5DAFCE019DA325B0018539C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5DAFD0519DA52140018539C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>VideoRecorder.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5DAFD0619DA52140018539C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5DAFD0519DA52140018539C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5DAFD0719DA52290018539C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>VideoRecorder.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B9C0EE67B99083F65EFB4163</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2FB038F7C7314FC3F5C78DFC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DCFF6ED4043D06198FA27716</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F675EF88B9DA71832842D50A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>17872618D493FB782AB59571</string>
-				<string>9F81A71075D685040C9319F2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>B5003A881908C31C007760C3</string>
-</dict>
-</plist>
+/* Begin PBXCopyFilesBuildPhase section */
+		B5003A8E1908C31C007760C3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				B5003A991908C31C007760C3 /* ZiggeoiOsSDK.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		17872618D493FB782AB59571 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2FB038F7C7314FC3F5C78DFC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F81A71075D685040C9319F2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B5003A901908C31C007760C3 /* libZiggeoiOsSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZiggeoiOsSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5003A931908C31C007760C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5003A971908C31C007760C3 /* ZiggeoiOsSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZiggeoiOsSDK-Prefix.pch"; sourceTree = "<group>"; };
+		B5003A981908C31C007760C3 /* ZiggeoiOsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZiggeoiOsSDK.h; sourceTree = "<group>"; };
+		B5003A9A1908C31C007760C3 /* ZiggeoiOsSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiggeoiOsSDK.m; sourceTree = "<group>"; };
+		B5003AA01908C31D007760C3 /* ZiggeoiOsSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiggeoiOsSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5003AA11908C31D007760C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B5003ABF1908C892007760C3 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		B5003AC01908C892007760C3 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		B52F41601A0E4C1D006F101C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B596C3271908D25F007AD95D /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
+		B596C3281908D25F007AD95D /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		B5B0BFDA1B3125FB00F4F4D5 /* UrlService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlService.h; sourceTree = "<group>"; };
+		B5B0BFDB1B31260B00F4F4D5 /* UrlService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlService.m; sourceTree = "<group>"; };
+		B5DAFCE019DA325B0018539C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B5DAFD0519DA52140018539C /* VideoRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRecorder.m; sourceTree = "<group>"; };
+		B5DAFD0719DA52290018539C /* VideoRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecorder.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5003A8D1908C31C007760C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5003A941908C31C007760C3 /* Foundation.framework in Frameworks */,
+				B5DAFCE119DA325B0018539C /* UIKit.framework in Frameworks */,
+				B9C0EE67B99083F65EFB4163 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5003A9D1908C31D007760C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5003AA21908C31D007760C3 /* XCTest.framework in Frameworks */,
+				B5003AA81908C31D007760C3 /* libZiggeoiOsSDK.a in Frameworks */,
+				B5003AA31908C31D007760C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5003A871908C31C007760C3 = {
+			isa = PBXGroup;
+			children = (
+				B5003A951908C31C007760C3 /* ZiggeoiOsSDK */,
+				B5003A921908C31C007760C3 /* Frameworks */,
+				B5003A911908C31C007760C3 /* Products */,
+				F675EF88B9DA71832842D50A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B5003A911908C31C007760C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5003A901908C31C007760C3 /* libZiggeoiOsSDK.a */,
+				B5003AA01908C31D007760C3 /* ZiggeoiOsSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5003A921908C31C007760C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FB038F7C7314FC3F5C78DFC /* libPods.a */,
+				B5DAFCE019DA325B0018539C /* UIKit.framework */,
+				B5003A931908C31C007760C3 /* Foundation.framework */,
+				B5003AA11908C31D007760C3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5003A951908C31C007760C3 /* ZiggeoiOsSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B5003A981908C31C007760C3 /* ZiggeoiOsSDK.h */,
+				B5003A9A1908C31C007760C3 /* ZiggeoiOsSDK.m */,
+				B596C3271908D25F007AD95D /* VideoPlayer.h */,
+				B596C3281908D25F007AD95D /* VideoPlayer.m */,
+				B5003ABF1908C892007760C3 /* AsyncImageView.h */,
+				B5003AC01908C892007760C3 /* AsyncImageView.m */,
+				B5003A961908C31C007760C3 /* Supporting Files */,
+				B5DAFD0519DA52140018539C /* VideoRecorder.m */,
+				B5DAFD0719DA52290018539C /* VideoRecorder.h */,
+				B52F41601A0E4C1D006F101C /* Images.xcassets */,
+				B5B0BFDA1B3125FB00F4F4D5 /* UrlService.h */,
+				B5B0BFDB1B31260B00F4F4D5 /* UrlService.m */,
+			);
+			path = ZiggeoiOsSDK;
+			sourceTree = "<group>";
+		};
+		B5003A961908C31C007760C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5003A971908C31C007760C3 /* ZiggeoiOsSDK-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F675EF88B9DA71832842D50A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17872618D493FB782AB59571 /* Pods.debug.xcconfig */,
+				9F81A71075D685040C9319F2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5003A8F1908C31C007760C3 /* ZiggeoiOsSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5003AB31908C31D007760C3 /* Build configuration list for PBXNativeTarget "ZiggeoiOsSDK" */;
+			buildPhases = (
+				724870D15785ED05644C294D /* Check Pods Manifest.lock */,
+				B5003A8C1908C31C007760C3 /* Sources */,
+				B5003A8D1908C31C007760C3 /* Frameworks */,
+				B5003A8E1908C31C007760C3 /* CopyFiles */,
+				DCFF6ED4043D06198FA27716 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZiggeoiOsSDK;
+			productName = ZiggeoiOsSDK;
+			productReference = B5003A901908C31C007760C3 /* libZiggeoiOsSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B5003A9F1908C31D007760C3 /* ZiggeoiOsSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5003AB61908C31D007760C3 /* Build configuration list for PBXNativeTarget "ZiggeoiOsSDKTests" */;
+			buildPhases = (
+				B5003A9C1908C31D007760C3 /* Sources */,
+				B5003A9D1908C31D007760C3 /* Frameworks */,
+				B5003A9E1908C31D007760C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5003AA71908C31D007760C3 /* PBXTargetDependency */,
+			);
+			name = ZiggeoiOsSDKTests;
+			productName = ZiggeoiOsSDKTests;
+			productReference = B5003AA01908C31D007760C3 /* ZiggeoiOsSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5003A881908C31C007760C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Ziggeo;
+			};
+			buildConfigurationList = B5003A8B1908C31C007760C3 /* Build configuration list for PBXProject "ZiggeoiOsSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B5003A871908C31C007760C3;
+			productRefGroup = B5003A911908C31C007760C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5003A8F1908C31C007760C3 /* ZiggeoiOsSDK */,
+				B5003A9F1908C31D007760C3 /* ZiggeoiOsSDKTests */,
+				B5003AB91908C402007760C3 /* UniversalLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5003A9E1908C31D007760C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		724870D15785ED05644C294D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5003ABE1908C571007760C3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target ImageFilters ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target ImageFilters -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
+		DCFF6ED4043D06198FA27716 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5003A8C1908C31C007760C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B596C3291908D25F007AD95D /* VideoPlayer.m in Sources */,
+				B5003A9B1908C31C007760C3 /* ZiggeoiOsSDK.m in Sources */,
+				B5B0BFDC1B31260B00F4F4D5 /* UrlService.m in Sources */,
+				B5003AC11908C892007760C3 /* AsyncImageView.m in Sources */,
+				B5DAFD0619DA52140018539C /* VideoRecorder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5003A9C1908C31D007760C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5003AC21908C892007760C3 /* AsyncImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5003AA71908C31D007760C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5003A8F1908C31C007760C3 /* ZiggeoiOsSDK */;
+			targetProxy = B5003AA61908C31D007760C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B5003AB11908C31D007760C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B5003AB21908C31D007760C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5003AB41908C31D007760C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17872618D493FB782AB59571 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/ZiggeoiOsSDK.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZiggeoiOsSDK/ZiggeoiOsSDK-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B5003AB51908C31D007760C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F81A71075D685040C9319F2 /* Pods.release.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/ZiggeoiOsSDK.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZiggeoiOsSDK/ZiggeoiOsSDK-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B5003AB71908C31D007760C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZiggeoiOsSDK/ZiggeoiOsSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ZiggeoiOsSDKTests/ZiggeoiOsSDKTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B5003AB81908C31D007760C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZiggeoiOsSDK/ZiggeoiOsSDK-Prefix.pch";
+				INFOPLIST_FILE = "ZiggeoiOsSDKTests/ZiggeoiOsSDKTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		B5003ABB1908C402007760C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "";
+			};
+			name = Debug;
+		};
+		B5003ABC1908C402007760C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5003A8B1908C31C007760C3 /* Build configuration list for PBXProject "ZiggeoiOsSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5003AB11908C31D007760C3 /* Debug */,
+				B5003AB21908C31D007760C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5003AB31908C31D007760C3 /* Build configuration list for PBXNativeTarget "ZiggeoiOsSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5003AB41908C31D007760C3 /* Debug */,
+				B5003AB51908C31D007760C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5003AB61908C31D007760C3 /* Build configuration list for PBXNativeTarget "ZiggeoiOsSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5003AB71908C31D007760C3 /* Debug */,
+				B5003AB81908C31D007760C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5003ABA1908C402007760C3 /* Build configuration list for PBXAggregateTarget "UniversalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5003ABB1908C402007760C3 /* Debug */,
+				B5003ABC1908C402007760C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5003A881908C31C007760C3 /* Project object */;
+}

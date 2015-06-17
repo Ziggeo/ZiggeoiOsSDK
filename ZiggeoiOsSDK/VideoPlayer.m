@@ -1,14 +1,6 @@
-//
-//  VideoPlayer.m
-//  ZiggeoiOsSDK
-//
-//  Created by Oliver Friedmann on 24/04/14.
-//  Copyright (c) 2014 Ziggeo. All rights reserved.
-//
-
 #import "VideoPlayer.h"
 #import "AsyncImageView.h"
-#import "ZiggeoiOsSDK.h"
+#import "UrlService.h"
 #import <MediaPlayer/MPMoviePlayerController.h>
 #import <MediaPlayer/MPMoviePlayerViewController.h>
 
@@ -40,8 +32,8 @@ NSString *token;
 - (void)setVideoToken:(NSString*)video_token
 {
     token = video_token;
-    [imgview loadImageFromURL:[ZiggeoiOsSDK getImagePath:token]];
-    movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:[ZiggeoiOsSDK getVideoPath:token]];
+    [imgview loadImageFromURL:[UrlService getImagePath:token]];
+    movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:[UrlService getVideoPath:token]];
 }
 
 - (void)play

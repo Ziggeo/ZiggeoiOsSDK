@@ -1,11 +1,3 @@
-//
-//  VideoRecorder.h
-//  ZiggeoiOsSDK
-//
-//  Created by Gianluca di Maggio on 29/09/14.
-//  Copyright (c) 2014 Ziggeo. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 @protocol VideoRecorderDelegate <NSObject>

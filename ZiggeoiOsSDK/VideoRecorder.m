@@ -1,13 +1,5 @@
-//
-//  VideoRecorder.m
-//  ZiggeoiOsSDK
-//
-//  Created by Gianluca di Maggio on 29/09/14.
-//  Copyright (c) 2014 Ziggeo. All rights reserved.
-//
-
 #import "VideoRecorder.h"
-#import "ZiggeoiOsSDK.h"
+#import "UrlService.h"
 #import "VCSimpleSession.h"
 #import <AVFoundation/AVFoundation.h>
 
@@ -123,12 +115,6 @@
             
             // Connection has ended
         case VCSessionStateEnded:
-            // Session could be completed either before or after the user
-            // has already selected the preview frame. In the former case,
-            // the player has been already setup the video player in
-            // the onItemClick method, hence nothing more need to be done
-            // here. In the latter case, a spinner has been shown instead,
-            // that we need to stop here and then display the player
             hasUploadEnded = TRUE;
             [NSThread sleepForTimeInterval:2];
             [self resetStream];
@@ -142,10 +128,6 @@
 
 
 - (void)toggleStream {
-    //
-    //    [self getPreviewFrame:nil];
-    //    [self performSegueWithIdentifier:@"previewSegue" sender:self];
-    //    return;
     
     // Get configuration
     switch(_session.rtmpSessionState) {
@@ -164,7 +146,7 @@
     if (isInitialStream) {
         
         // Initialize a url request
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[ZiggeoiOsSDK postNewVideoPath]];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[UrlService postNewVideoPath]];
         [request setHTTPMethod:@"POST"];
         NSOperationQueue *queue = [[NSOperationQueue alloc] init];
         
@@ -194,7 +176,7 @@
     else {
         // Get the url
         // Initialize a url request
-        NSURLRequest *request = [NSURLRequest requestWithURL:[ZiggeoiOsSDK postNewStreamPath:VIDEO_TOKEN]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[UrlService postNewStreamPath:VIDEO_TOKEN]];
         NSOperationQueue *queue = [[NSOperationQueue alloc] init];
         
         // Perform an async post request, and define what to do with the data received
@@ -218,7 +200,7 @@
 - (void) startStream {
     
     // Get the server parameters
-    [_session startRtmpSessionWithURL:[ZiggeoiOsSDK recordWowzaServer] andStreamKey:[ZiggeoiOsSDK recordWowzaPath:VIDEO_TOKEN stream:STREAM_TOKEN]];
+    [_session startRtmpSessionWithURL:[UrlService recordWowzaServer] andStreamKey:[UrlService recordWowzaPath:VIDEO_TOKEN stream:STREAM_TOKEN]];
     
     
 }
@@ -228,18 +210,8 @@
     NSLog(@"Stopping stream");
     
     
-    
-    // Stops the stream and disconnects from the RTSP server
     [_session endRtmpSession];
 
-    // TODO?
-    /*
-    Config *conf = [Config sharedManager];
-    if (conf.debug) {
-        NSString *tempUrl = [conf getRecordingURLWithAppName:@"ziggeo" andStreamName:@"test_video.mp4"];
-        [self getRequest:[NSString stringWithFormat:@"%@&action=stopRecording", tempUrl]];
-    }
-     */
     
     videoRecorded = true;
     
@@ -254,7 +226,7 @@
     videoRecorded = TRUE;
 
     // Start recording the stream with HTTP post request
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[ZiggeoiOsSDK postVideoPath:VIDEO_TOKEN stream:STREAM_TOKEN]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[UrlService postVideoPath:VIDEO_TOKEN stream:STREAM_TOKEN]];
     [request setHTTPMethod:@"POST"];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
@@ -266,16 +238,6 @@
 
 }
 
-
-
-/********* Rotation Method **********/
-
-//- (BOOL) shouldAutorotate {
-//    NSLog(@"Can rotate:%d", canRotate);
-//    return canRotate;
-//}
-
-/********** Some getters/setters *************/
 
 - (BOOL) hasUploadEnded { return hasUploadEnded; }
 
