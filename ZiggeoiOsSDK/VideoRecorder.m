@@ -145,16 +145,7 @@
     // If this is the first stream, then create a new video via a POST request
     if (isInitialStream) {
         
-        // Initialize a url request
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[UrlService postNewVideoPath]];
-        [request setHTTPMethod:@"POST"];
-        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-        
-        // Perform an async post request, and define what to do with the data received
-        [NSURLConnection
-         sendAsynchronousRequest:request
-         queue:queue
-         completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        [UrlService postNewVideoRequest:^(NSURLResponse *response, NSData *data, NSError *error) {
              
              // Request executed correctly, parse Video token and Stream token
              if (error == nil && data.length > 0) {
@@ -166,8 +157,7 @@
                  [self startStream];
              }
              
-         }
-         ];
+         }];
         
         isInitialStream = FALSE;
     }
@@ -176,14 +166,7 @@
     else {
         // Get the url
         // Initialize a url request
-        NSURLRequest *request = [NSURLRequest requestWithURL:[UrlService postNewStreamPath:VIDEO_TOKEN]];
-        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-        
-        // Perform an async post request, and define what to do with the data received
-        [NSURLConnection
-         sendAsynchronousRequest:request
-         queue:queue
-         completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        [UrlService postNewStreamRequest:VIDEO_TOKEN completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
              
              // Request executed correctly, parse Video token and Stream token
              if (error == nil && data.length > 0) {
@@ -191,8 +174,7 @@
                  STREAM_TOKEN = [[dict objectForKey:@"stream"] objectForKey:@"token"];
                  [self startStream];
              }
-         }
-         ];
+         }];
     }
     
 }
@@ -224,16 +206,10 @@
     canRotate = TRUE;
     hasUploadEnded = FALSE;
     videoRecorded = TRUE;
-
-    // Start recording the stream with HTTP post request
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[UrlService postVideoPath:VIDEO_TOKEN stream:STREAM_TOKEN]];
-    [request setHTTPMethod:@"POST"];
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
-    [NSURLConnection
-     sendAsynchronousRequest:request
-     queue:queue
-     completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){}];
+    // Start recording the stream with HTTP post request
+    
+    [UrlService postVideoRequest:VIDEO_TOKEN stream:STREAM_TOKEN completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){}];
     
 
 }
