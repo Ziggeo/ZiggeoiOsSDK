@@ -67,4 +67,4 @@ Your App:
 ## License
 MIT Software License.
 
-Copyright (c) 2014 Ziggeo
+Copyright (c) 2014-2105 Ziggeo
