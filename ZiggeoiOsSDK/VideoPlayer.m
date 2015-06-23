@@ -38,7 +38,7 @@ NSString *token;
 
 - (void)play
 {
-    [self.window.rootViewController presentMoviePlayerViewControllerAnimated:movieController];
+    [self.vc presentMoviePlayerViewControllerAnimated:movieController];
     [movieController.moviePlayer play];
 }
 

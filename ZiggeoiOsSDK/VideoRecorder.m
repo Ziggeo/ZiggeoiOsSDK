@@ -3,9 +3,7 @@
 #import "VCSimpleSession.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface VideoRecorder () <VCSessionDelegate>
-    @property (nonatomic, retain) VCSimpleSession* session;
-    @property (weak, nonatomic) id<VideoRecorderDelegate> delegate;
+@interface VideoRecorder () <VCSessionDelegate, UIGestureRecognizerDelegate>
     @property (nonatomic, assign) int recordingDuration;
 @end
 
@@ -19,7 +17,9 @@
     UIButton *_buttonFlash;
     UIButton *_buttonStart;
     UIButton *_buttonCamera;
-    
+    UIView *_loadingView;
+    UILabel *_loadingLabel;
+    UIActivityIndicatorView *_loadingIndicator;
 }
 
 
@@ -67,8 +67,59 @@
              if ([device hasTorch] && [device hasFlash])
                     [_buttonFlash setEnabled:YES];
          }
+        [self setUpLoadingView];
+        [self setUpZoom];
     }
     return self;
+}
+
+- (void)setUpZoom
+{
+    self.multipleTouchEnabled = YES;
+    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+    pinch.delegate = self;
+    [self addGestureRecognizer:pinch];
+}
+
+- (void)pinch:(UIPinchGestureRecognizer *)sender
+{
+    AVCaptureDevice *device = nil;
+    for (AVCaptureDevice *dev in [AVCaptureDevice devices]) {
+        if ((dev.position == AVCaptureDevicePositionBack && self.session.cameraState == VCCameraStateBack) || (dev.position == AVCaptureDevicePositionFront && self.session.cameraState == VCCameraStateFront)) {
+            device = dev;
+            break;
+        }
+    }
+    if ([device lockForConfiguration:nil]) {
+        CGFloat newScale = device.videoZoomFactor * sender.scale;
+        CGFloat maxScale = device.activeFormat.videoMaxZoomFactor;
+        //        NSLog([NSString stringWithFormat:@"%f - sender,%f, %f", sender.scale, newScale, maxScale ]);
+        CGFloat boundedScale = MAX(MIN(newScale, maxScale), 1.0);
+        device.videoZoomFactor = boundedScale;
+        [device unlockForConfiguration];
+    }
+    [sender setScale:1.f];
+}
+
+
+- (void)setUpLoadingView
+{
+    _loadingView = [[UIView alloc] initWithFrame:CGRectMake(20, 200, self.frame.size.width - 40, 200)];
+    _loadingView.backgroundColor = [UIColor blackColor];
+    _loadingView.alpha = .7;
+    _loadingView.layer.cornerRadius = 10.0;
+    
+    _loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _loadingIndicator.frame = CGRectMake(0, 20, _loadingView.frame.size.width, 60);
+    [_loadingView addSubview:_loadingIndicator];
+    
+    _loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, _loadingView.frame.size.width - 20, 40)];
+    _loadingLabel.font = [UIFont boldSystemFontOfSize:22];
+    _loadingLabel.textColor = [UIColor whiteColor];
+    _loadingLabel.textAlignment = NSTextAlignmentCenter;
+    _loadingLabel.numberOfLines = 0;
+    _loadingLabel.text = @"Preparing to Record...";
+    [_loadingView addSubview:_loadingLabel];
 }
 
 - (void)toggleFlash {
@@ -109,12 +160,14 @@
             
             // Once session has started, start countdown timer
         case VCSessionStateStarted:
+            [self updateViewForStart];
             if (_recordingDuration)
                 [self performSelector:@selector(stopStream) withObject:nil afterDelay:_recordingDuration];
             break;
             
             // Connection has ended
         case VCSessionStateEnded:
+            [self updateViewForStopped];
             hasUploadEnded = TRUE;
             [NSThread sleepForTimeInterval:2];
             [self resetStream];
@@ -126,12 +179,18 @@
     }
 }
 
-
 - (void)toggleStream {
     
     // Get configuration
     switch(_session.rtmpSessionState) {
         case VCSessionStatePreviewStarted:
+            [self addLoadingView];
+            [self retrieveTokens];
+            canRotate = FALSE;
+            break;
+        case VCSessionStateEnded:
+            [self addLoadingView];
+            isInitialStream = YES;
             [self retrieveTokens];
             canRotate = FALSE;
             break;
@@ -212,6 +271,25 @@
     [UrlService postVideoRequest:VIDEO_TOKEN stream:STREAM_TOKEN completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){}];
     
 
+}
+
+#pragma MARK Loading View Methods
+- (void)addLoadingView
+{
+    [_loadingIndicator startAnimating];
+    [self addSubview:_loadingView];
+}
+
+- (void)updateViewForStart
+{
+    [_loadingView removeFromSuperview];
+    [_buttonStart setImage:[UIImage imageNamed:@"record-pressed"] forState:UIControlStateNormal];
+}
+
+- (void)updateViewForStopped
+{
+    [_loadingView removeFromSuperview];
+    [_buttonStart setImage:[UIImage imageNamed:@"record-unpressed"] forState:UIControlStateNormal];
 }
 
 
